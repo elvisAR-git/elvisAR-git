@@ -1,12 +1,12 @@
 @font-face{
     font-family:'Silkscreen';
-    src:url('/fonts/Silkscreen-Regular.ttf');
+    src:url('../fonts/Silkscreen-Regular.ttf');
     font-display: swap;
 }
 
 @font-face{
     font-family: 'Quantico';
-    src: url('/fonts/Quantico-Regular.ttf');
+    src: url('../fonts/Quantico-Regular.ttf');
     font-display: swap;
 }
 

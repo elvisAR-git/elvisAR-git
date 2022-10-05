@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oddly</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body class="dark">
+    <div class="header">
+        <img src="/images/alan.jfif" alt="alan" class="me">
+        <span class="material-symbols-outlined" id="theme-toggle" onclick="toggleTheme()">
+            dark_mode
+        </span>
+        <p>Software developer</p>
+        <p>
+            <a href="https://www.linkedin.com/in/elvis-m-6701761a7/" target="_blank">Linkedin</a> | <a
+                href="https://twitter.com/alanray459" target="_blank">Twitter</a> | <a
+                href="https://github.com/elvisAR-git" target="_blank">Github</a>
+            | <a href="https://medium.com/@alanray459/about" target="_blank">Medium</a>
+        </p>
+
+        <img src="https://wakatime.com/badge/user/214588b9-7bb7-4150-8be2-02e9849b92b1.svg" alt="wakatime">
+        <h1 class="silk">
+            Elvis Moraa
+        </h1>
+    </div>
+
+    <div class="content">
+        <div class="about-me">
+            <h2 class="silk">
+                About Me
+            </h2>
+            <p>
+                Hey! thanks for visiting my site. its pretty simple, i like it that way. I'm a programmer and I build a
+                lot of things, like websites, apps and even just fun little projects. I have been doing this for quite a
+                while and i enjoy it. <br>
+
+                <strong class="silk">When did I start?</strong> <br>
+
+                Well, realistically probably in late highschool 2016. But professionally, back in 2018.
+
+                <br>
+
+                <strong class="silk">What do I do?</strong> <br>
+
+                Specificaly thats a very hard question to answer. I do a lot of things, I'm good at a few and fairly
+                compentent in others. But if you interested in my technologies, well here's what I use.
+
+            <dl>
+                <dt>
+                    <strong class="silk">Frontend</strong>
+                </dt>
+                <dd>HTML, CSS, Vanilla Javascript, <a href="https://angular.io/" target="_blank">Angular</a>, SCSS and
+                    anything withing
+                    the scope of angular
+                    <br>
+                    <strong>How well do I work with these?</strong>
+                    <br>
+                    I'm pretty good with these, I can build a website from scratch if i have to.
+            </dl>
+
+            <dl>
+                <dt>
+                    <strong class="silk">Backend</strong>
+                </dt>
+                <dd><a href="https://nodejs.org/" target="_blank">NodeJs</a>, Express, MongoDB, Mongoose, Firebase, and
+                    Python.
+                    <br>
+                    <strong>Thats a lot are sure you can handle that?</strong>
+                    <br>
+                    Most of us devs do alot and so we know alot too. I prefer building with NodeJs and Express and a
+                    MongoDB
+                    database, but over the years ive picked up python and firebase so that's also a skill I have.
+                    <br>
+                    <strong>What about SQL?</strong>
+                    <br>
+                    Sql was one of my first databases to venture into so I can still work with it, however i use ORMs
+                    like <a href="https://typeorm.io/" target="_blank">TypeORM</a>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt class="silk">Mobile</dt>
+                <dd>
+                    <a href="https://flutter.dev/" target="_blank">Flutter</a> and <a href="https://kotlinlang.org/"
+                        target="_blank">Kotlin</a>
+                    <br>
+                    <strong>What about Java?</strong>
+                    <br>
+                    I have worked with Java before, but I prefer to use flutter and kotlin for mobile development
+                    because it a way easier path to take.
+                    <br>
+                    <strong>So you like it easy?</strong>
+                    <br>
+                    Well yes! I'm an advocate for effeciency and I like to get things done quickly and easily.
+
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>
+                    <strong class="silk">Other tech stuff</strong>
+                </dt>
+                <dd>Github, Docker, Kubernetes, GCP, and a few other things.
+                    <br>
+                    <strong>What do you use these for?</strong>
+                    <br>
+                    I use git for version control and for hosting my projects, docker for containerizing my
+                    applications, kubernetes for managing my containers, and GCP for hosting my applications. I'm
+                    familiar with the cloud space and good number of services on GCP like App Engine, Cloud Run, Cloud
+                    Functions, Cloud SQL, Cloud Storage, Cloud Build and GKE.
+                </dd>
+            </dl>
+            </p>
+        </div>
+
+        <h2 class="silk">
+            Projects
+        </h2>
+        <p>
+            These are projects that I have personally created and all of the innovation, code-work and eventual designs
+            are mine.
+        </p>
+        <div class="projects">
+
+
+            <div class="project">
+                <p class="silk">Code plagiarism checker [VANILLA JS, NODEJS, MONGODB]</p>
+                <p class="desc">
+                    This one is fairly old. Does exactly as stated. Compute similarities between code that's uploaded
+                    and code
+                    that's already there <span class="show-more show" onclick="showMore(event)">...</span>
+                <div class="more">
+                    <span class="show-more hide" onclick="hideMore(event)"><span class="material-symbols-outlined">
+                            hide
+                        </span></span>
+                    <br>
+                    <p class="more-text">
+                        The algorithm is simple and complex too and not well optimized yet. I had
+                        plans to
+                        integrate with open source code repo API’s but shelved it because I was learning a lot of
+                        things too
+                        fast.
+                        Gained a lot of AJAX skills on this one.
+                    </p>
+                </div>
+                </p>
+                <div class="actions">
+                    <a href="https://plagy.herokuapp.com" target="_blank" class="open">
+                        Run
+                        <span class="material-symbols-outlined">
+                            open_in_new
+                        </span>
+                    </a>
+
+                    <!-- view -->
+
+                    <a href="https://github.com/elvisAR-git/plagchecker" target="_blank" class="open">
+                        View
+                        <span class="material-symbols-outlined">
+                            visibility
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <div class="project">
+                <p class="silk">Beat Pad [VANILLA JS]</p>
+                <p class="desc">
+                    This one is just a creative way to make a rhythm on your browser. This is one of my earliest
+                    projects in
+                    Javascript so it might be interesting to look at considering
+                    <span class="show-more show" onclick="showMore(event)">...</span>
+                <div class="more">
+                    <span class="show-more hide" onclick="hideMore(event)"><span class="material-symbols-outlined">
+                            hide
+                        </span></span>
+                    <br>
+                    what I was learning at the time was
+                    just vanilla. If you manage to make music with it, you must be good :)
+                </div>
+                </p>
+
+                <div class="actions">
+                    <a href="https://elvisar-git.github.io/beat_pad/" target="_blank" class="open">
+                        Run
+                        <span class="material-symbols-outlined">
+                            open_in_new
+                        </span>
+                    </a>
+
+                    <!-- view -->
+
+                    <a href="https://github.com/elvisAR-git/beat_pad" target="_blank" class="open">
+                        View
+                        <span class="material-symbols-outlined">
+                            visibility
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="project">
+                <p class="silk">Visualizer [VANILLA JS, CANVAS]</p>
+                <p class="desc">
+                    This one is unfinished but functional. It's one of my creative coding projects where I intended to
+                    build
+                    a
+                    music player in vanilla JS and add a complex graphical visualizer system for the
+                    <span class="show-more show" onclick="showMore(event)">...</span>
+                <div class="more">
+                    <span class="show-more hide" onclick="hideMore(event)"><span class="material-symbols-outlined">
+                            hide
+                        </span></span>
+                    <br>
+                    audio stream,
+                    something you’d see in very high end music editing software like Fruity loops. To see what I mean,
+                    just open
+                    it
+                    and
+                    select any audio file, preferably music and just enjoy the bleak white graph for now. I do intend to
+                    pursue
+                    this project to completion at my best of time.
+                </div>
+                </p>
+
+
+                <div class="actions">
+                    <a href="https://elvisar-git.github.io/visualizer/" target="_blank" class="open">
+                        Run
+                        <span class="material-symbols-outlined">
+                            open_in_new
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="project">
+                <p class="silk">Blitz [TYPESCRIPT]</p>
+                <p class="desc">
+                    This is one of my most recent projects that I sort of completed. I write code in many frameworks
+                    that
+                    employ
+                    state management solutions, you know like RxJS with react and NgXs in Angular
+                    <span class="show-more show" onclick="showMore(event)">...</span>
+                <div class="more">
+                    <span class="show-more hide" onclick="hideMore(event)"><span class="material-symbols-outlined">
+                            hide
+                        </span></span>
+                    <br>
+                    So my main problem
+                    with
+                    these
+                    technologies is that they are really complex to learn and most times you don't even need them
+                    for
+                    your
+                    run
+                    on the mill type projects. But mostly you need part of their functionality in your app but they
+                    force
+                    you to
+                    do the whole boilerplate, so I made a very minimal state management solution that works and best
+                    of
+                    all
+                    you
+                    can scale it as you wish. Bitz is very experimental and may need to be optimized but it does
+                    work.
+                </div>
+                </p>
+
+                <div class="actions">
+
+                    <a href="https://github.com/elvisAR-git/blitz" target="_blank" class="open">
+                        View
+                        <span class="material-symbols-outlined">
+                            visibility
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Github -->
+            <div class="project">
+                <p class="silk">Github</p>
+
+                <p class="desc">
+                    I have a lot of projects on my github. I'm not going to list them all here but you can check them
+                    out</p>
+                <div class="actions">
+                    <a href="https://github.com/elvisAR-git" target="_blank" class="open">
+                        Github
+                        <span class="material-symbols-outlined">
+                            open_in_new
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="footer">
+
+            <div class="footer-content">
+                <p class="silk">Contact</p>
+                <p class="desc">
+                    <a href="mailto:alanray459@gmaill.com" target="_blank">
+                        [Send me an email]
+                    </a>
+                    <span>Or</span>
+                    <a href="/documents/Resume.pdf" target="_blank">
+                        [Download a copy of my resume]
+                    </a>
+                </p>
+
+                <p>
+                    I'm available on all platforms but predominantly Just mail.
+                </p>
+
+                <p>
+                    Thanks for reading through if you did :)
+                </p>
+            </div>
+        </div>
+</body>
+<script src="/js/some.js"></script>
+
+</html>

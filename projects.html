@@ -13,9 +13,17 @@
 
 <body class="dark">
     <div class="header">
-        <span class="material-symbols-outlined" id="theme-toggle" onclick="toggleTheme()">
+        <span class="material-symbols-outlined" id="theme-toggle" onclick="toggleThemeMenu()">
             dark_mode
         </span>
+
+        <!-- theme options, dark, light, follow device -->
+
+        <ul class="theme-options" id="theme-options">
+            <li onclick="setTheme('dark', event)" id="dark">Dark</li>
+            <li onclick="setTheme('light',event)" id="light">Light</li>
+            <li onclick="setTheme('auto', event)" id="default">device default</li>
+        </ul>
         <p>Get <a href="./index.html">Back to me</a> or <a href="./what_i_use.html">Checkout what I use</a></p>
     </div>
 

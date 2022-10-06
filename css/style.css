@@ -37,13 +37,14 @@ html:has(.light) .theme-options{
 html:has(.light) .theme-options li.active{
     background-color: #0c050c;
     padding-left: 2px;
-    
+    cursor: pointer;
     transition: all 0.5s ease;
 }
 
 html:has(.dark) .theme-options li.active{
     background-color: #f5f5f5;
     padding-left: 2px;
+    cursor: pointer;
     transition: all 0.5s ease;
 }
 
@@ -136,6 +137,8 @@ body{
     grid-auto-rows: minmax(auto, auto);
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    padding-left: 10px;
 
 }
 

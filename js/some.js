@@ -1,3 +1,35 @@
+const savedTheme = window.localStorage.getItem('theme')
+
+window.onload = () => {
+    //    appy theme
+
+    if (savedTheme == 'light')
+    {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+
+
+
+        let toggle = document.getElementById("theme-toggle");
+
+        toggle.innerHTML = "light_mode";
+
+        window.localStorage.setItem('theme', 'light')
+
+    } else if (savedTheme == 'dark')
+    {
+
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+
+        let toggle = document.getElementById("theme-toggle");
+
+        toggle.innerHTML = "dark_mode";
+        window.localStorage.setItem('theme', 'dark')
+    }
+
+}
+
 function toggleTheme() {
     if (document.body.classList.contains("dark"))
     {
@@ -10,7 +42,9 @@ function toggleTheme() {
 
         toggle.innerHTML = "light_mode";
 
-    } else
+        window.localStorage.setItem('theme', 'light')
+
+    } else if (document.body.classList.contains("light"))
     {
 
         document.body.classList.remove("light");
@@ -19,6 +53,7 @@ function toggleTheme() {
         let toggle = document.getElementById("theme-toggle");
 
         toggle.innerHTML = "dark_mode";
+        window.localStorage.setItem('theme', 'dark')
     }
 
 }
@@ -49,8 +84,7 @@ function hideMore(event) {
         if (elem.className == 'desc')
         {
             let children = Array.from(elem.children)
-            let showCtrl = children[children.length - 1]
-            return showCtrl.style = ''
+            children[children.length - 1].style = ''
         }
     })
 

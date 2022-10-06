@@ -1,59 +1,153 @@
 const savedTheme = window.localStorage.getItem('theme')
-
+const themeConfig = window.localStorage.getItem('theme-setting')
 window.onload = () => {
-    //    appy theme
 
-    if (savedTheme == 'light')
+    if (themeConfig == undefined)
     {
-        document.body.classList.remove("dark");
-        document.body.classList.add("light");
-
-
-
-        let toggle = document.getElementById("theme-toggle");
-
-        toggle.innerHTML = "light_mode";
-
-        window.localStorage.setItem('theme', 'light')
-
-    } else if (savedTheme == 'dark')
-    {
-
-        document.body.classList.remove("light");
-        document.body.classList.add("dark");
-
-        let toggle = document.getElementById("theme-toggle");
-
-        toggle.innerHTML = "dark_mode";
-        window.localStorage.setItem('theme', 'dark')
+        window.localStorage.setItem('theme-setting', 'auto')
     }
+
+    if (themeConfig != 'auto')
+    {
+        let menu = document.getElementById('theme-options')
+
+        Array.from(menu.children).forEach(e => {
+            e.classList.remove('active')
+            e.classList.remove('inactive')
+        })
+
+        if (savedTheme == 'dark')
+        {
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
+            let toggle = document.getElementById("theme-toggle");
+            toggle.innerHTML = "dark_mode";
+            window.localStorage.setItem('theme', 'dark')
+            window.localStorage.setItem('theme-setting', 'dark')
+
+            Array.from(menu.children).forEach(e => {
+                if (e.id == 'dark')
+                {
+                    e.classList.add('active')
+                } else
+                {
+                    e.classList.add('inactive')
+                }
+            })
+        } else if (savedTheme == 'light')
+        {
+
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+            let toggle = document.getElementById("theme-toggle");
+            toggle.innerHTML = "light_mode";
+            window.localStorage.setItem('theme', 'light')
+            window.localStorage.setItem('theme-setting', 'light')
+
+
+            Array.from(menu.children).forEach(e => {
+                if (e.id == 'light')
+                {
+                    e.classList.add('active')
+                } else
+                {
+                    e.classList.add('inactive')
+                }
+            })
+        }
+    }
+
+    // on outside click
+
+    document.addEventListener('click', function (event) {
+
+        let isClickInside = document.getElementById('theme-toggle').contains(event.target) || document.getElementById('dark').contains(event.target) || document.getElementById('light').contains(event.target) || document.getElementById('default').contains(event.target)
+
+        if (!isClickInside)
+        {
+            let menu = document.getElementById('theme-options')
+            menu.style.display = 'none'
+        }
+    })
+
+    themeChecker()
 
 }
 
-function toggleTheme() {
-    if (document.body.classList.contains("dark"))
+
+function toggleThemeMenu() {
+    let menu = document.getElementById('theme-options')
+    if (menu.style.display == 'none' || menu.style.display == '')
     {
-        document.body.classList.remove("dark");
-        document.body.classList.add("light");
+        menu.style.display = 'block'
+    } else
+    {
+        menu.style.display = 'none'
+    }
+}
 
 
 
-        let toggle = document.getElementById("theme-toggle");
 
-        toggle.innerHTML = "light_mode";
+function setTheme(mode) {
 
-        window.localStorage.setItem('theme', 'light')
+    if (mode == 'auto')
+    {
+        window.localStorage.setItem('theme-setting', 'auto')
+        return themeChecker()
+    } else
+    {
+        window.localStorage.setItem('theme-setting', 'manual')
 
-    } else if (document.body.classList.contains("light"))
+        if (mode == 'dark')
+        {
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
+            let toggle = document.getElementById("theme-toggle");
+            toggle.innerHTML = "dark_mode";
+            window.localStorage.setItem('theme', 'dark')
+            window.localStorage.setItem('theme-setting', 'dark')
+        } else
+        {
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+            let toggle = document.getElementById("theme-toggle");
+            toggle.innerHTML = "light_mode";
+            window.localStorage.setItem('theme', 'light')
+            window.localStorage.setItem('theme-setting', 'light')
+        }
+    }
+
+    let menu = document.getElementById('theme-options')
+
+    Array.from(menu.children).forEach(e => {
+        e.classList.remove('active')
+        e.classList.remove('inactive')
+    })
+
+    if (mode == 'dark')
+    {
+        Array.from(menu.children).forEach(e => {
+            if (e.id == 'dark')
+            {
+                e.classList.add('active')
+            } else
+            {
+                e.classList.add('inactive')
+            }
+        })
+    } else if (mode == 'light')
     {
 
-        document.body.classList.remove("light");
-        document.body.classList.add("dark");
-
-        let toggle = document.getElementById("theme-toggle");
-
-        toggle.innerHTML = "dark_mode";
-        window.localStorage.setItem('theme', 'dark')
+        Array.from(menu.children).forEach(e => {
+            if (e.id == 'light')
+            {
+                e.classList.add('active')
+            } else
+            {
+                e.classList.add('inactive')
+            }
+        })
     }
 
 }
@@ -88,5 +182,89 @@ function hideMore(event) {
         }
     })
 
+}
 
+
+function themeChecker() {
+    // animation loop
+    if (window.localStorage.getItem('theme-setting') != 'auto')
+    {
+        return;
+    }
+
+    const darkMode = window.matchMedia("(prefers-color-scheme:dark)").matches;
+    const currentTheme = window.localStorage.getItem('theme')
+
+    if (currentTheme == undefined)
+    {
+        // apply dark mode if user has dark mode enabled
+
+        if (darkMode)
+        {
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
+            let toggle = document.getElementById("theme-toggle");
+            toggle.innerHTML = "dark_mode";
+
+            // save theme
+            window.localStorage.setItem('theme', 'dark')
+
+        } else
+        {
+
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+            let toggle = document.getElementById("theme-toggle");
+            toggle.innerHTML = "light_mode";
+            window.localStorage.setItem('theme', 'light')
+        }
+    }
+
+    if (darkMode)
+    {
+        if (Array.from(document.body.classList).includes('light'))
+        {
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
+            let toggle = document.getElementById("theme-toggle");
+            toggle.innerHTML = "dark_mode";
+
+            // save theme
+            window.localStorage.setItem('theme', 'dark')
+        }
+    } else
+    {
+        if (Array.from(document.body.classList).includes('dark'))
+        {
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+            let toggle = document.getElementById("theme-toggle");
+            toggle.innerHTML = "light_mode";
+
+            // save theme
+            window.localStorage.setItem('theme', 'light')
+        }
+
+    }
+
+
+    let menu = document.getElementById('theme-options')
+
+    Array.from(menu.children).forEach(e => {
+
+        if (e.id == 'default')
+        {
+            e.classList.add('active')
+            e.classList.remove('inactive')
+        } else
+        {
+
+            e.classList.remove('active')
+            e.classList.remove('inactive')
+        }
+
+    })
+
+
+    requestAnimationFrame(themeChecker);
 }

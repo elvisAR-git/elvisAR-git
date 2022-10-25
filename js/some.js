@@ -1,78 +1,78 @@
 const savedTheme = window.localStorage.getItem('theme')
 const themeConfig = window.localStorage.getItem('theme-setting')
-window.onload = () => {
-
-    if (themeConfig == undefined)
-    {
-        window.localStorage.setItem('theme-setting', 'auto')
-    }
-
-    if (themeConfig != 'auto')
-    {
-        let menu = document.getElementById('theme-options')
-
-        Array.from(menu.children).forEach(e => {
-            e.classList.remove('active')
-            e.classList.remove('inactive')
-        })
-
-        if (savedTheme == 'dark')
-        {
-            document.body.classList.remove("light");
-            document.body.classList.add("dark");
-            let toggle = document.getElementById("theme-toggle");
-            toggle.innerHTML = "dark_mode";
-            window.localStorage.setItem('theme', 'dark')
-            window.localStorage.setItem('theme-setting', 'dark')
-
-            Array.from(menu.children).forEach(e => {
-                if (e.id == 'dark')
-                {
-                    e.classList.add('active')
-                } else
-                {
-                    e.classList.add('inactive')
-                }
-            })
-        } else if (savedTheme == 'light')
-        {
-
-            document.body.classList.remove("dark");
-            document.body.classList.add("light");
-            let toggle = document.getElementById("theme-toggle");
-            toggle.innerHTML = "light_mode";
-            window.localStorage.setItem('theme', 'light')
-            window.localStorage.setItem('theme-setting', 'light')
 
 
-            Array.from(menu.children).forEach(e => {
-                if (e.id == 'light')
-                {
-                    e.classList.add('active')
-                } else
-                {
-                    e.classList.add('inactive')
-                }
-            })
-        }
-    }
+if (themeConfig == undefined)
+{
+    window.localStorage.setItem('theme-setting', 'auto')
+}
 
-    // on outside click
+if (themeConfig != 'auto')
+{
+    let menu = document.getElementById('theme-options')
 
-    document.addEventListener('click', function (event) {
-
-        let isClickInside = document.getElementById('theme-toggle').contains(event.target) || document.getElementById('dark').contains(event.target) || document.getElementById('light').contains(event.target) || document.getElementById('default').contains(event.target)
-
-        if (!isClickInside)
-        {
-            let menu = document.getElementById('theme-options')
-            menu.style.display = 'none'
-        }
+    Array.from(menu.children).forEach(e => {
+        e.classList.remove('active')
+        e.classList.remove('inactive')
     })
 
-    themeChecker()
+    if (savedTheme == 'dark')
+    {
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+        let toggle = document.getElementById("theme-toggle");
+        toggle.innerHTML = "dark_mode";
+        window.localStorage.setItem('theme', 'dark')
+        window.localStorage.setItem('theme-setting', 'dark')
 
+        Array.from(menu.children).forEach(e => {
+            if (e.id == 'dark')
+            {
+                e.classList.add('active')
+            } else
+            {
+                e.classList.add('inactive')
+            }
+        })
+    } else if (savedTheme == 'light')
+    {
+
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+        let toggle = document.getElementById("theme-toggle");
+        toggle.innerHTML = "light_mode";
+        window.localStorage.setItem('theme', 'light')
+        window.localStorage.setItem('theme-setting', 'light')
+
+
+        Array.from(menu.children).forEach(e => {
+            if (e.id == 'light')
+            {
+                e.classList.add('active')
+            } else
+            {
+                e.classList.add('inactive')
+            }
+        })
+    }
 }
+
+// on outside click
+
+document.addEventListener('click', function (event) {
+
+    let isClickInside = document.getElementById('theme-toggle').contains(event.target) || document.getElementById('dark').contains(event.target) || document.getElementById('light').contains(event.target) || document.getElementById('default').contains(event.target)
+
+    if (!isClickInside)
+    {
+        let menu = document.getElementById('theme-options')
+        menu.style.display = 'none'
+    }
+})
+
+themeChecker()
+
+
 
 
 function toggleThemeMenu() {

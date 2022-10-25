@@ -35,7 +35,7 @@ html:has(.light) .theme-options{
 
 
 html:has(.light) .theme-options li.active{
-    background-color: #0c050c;
+    background-color: #1e0e1e;
     padding-left: 2px;
     cursor: pointer;
     transition: all 0.5s ease;

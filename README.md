@@ -3,4 +3,4 @@
 Hello! I'm a Typescript developer. Plenty of good experience with JavaScript so that tells you why I write TS.
 I'm interested in projects that are worth my time - i'm not designing another reactive framework :)
 
-I'm Open to collaborations for creative projects in TS, Python and C
+I'm open to collaborations for creative projects in TS, Python and C

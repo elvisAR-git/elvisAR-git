@@ -284,8 +284,8 @@ html:has(.light) .project::before{
 
 
 .resume iframe {
-    width: 60%;
-    height: 100vw;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 200px);
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px #5222524f;
@@ -294,6 +294,92 @@ html:has(.light) .project::before{
     transition: all 0.5s ease;
 }
 
+
+@media (max-width: 768px) {
+    .resume iframe {
+        display: none;
+    }
+}
+
+.download-btn{
+    background-color: #522252;
+    color: #f5f5f5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.download-btn a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.download-btn:hover{
+    background-color: #f5f5f5;
+    color: #522252;
+    border: 1px solid #522252;
+}
+
+html:has(.dark) .download-btn:hover{
+    background-color: #522252;
+    color: #f5f5f5;
+    border: 1px solid #522252;
+}
+html:has(.dark) .download-btn{
+    background-color: #522252;
+    color: #f5f5f5;
+    border: none;
+}
+html:has(.light) .download-btn{
+    background-color: #f5f5f5;
+    color: #522252;
+    border: none;
+}
+html:has(.light) .download-btn:hover{
+    background-color: #522252;
+    color: #f5f5f5;
+    border: 1px solid #522252;
+}
+html:has(.dark) .resume iframe{
+    box-shadow: 0 0 10px 5px #f5f5f54f;
+}
+html:has(.light) .resume iframe{
+    box-shadow: 0 0 10px 5px #5222524f;
+}
+html:has(.dark) .resume{
+    background-color: #0c050c;
+    color: #f5f5f5;
+}
+html:has(.light) .resume{
+    background-color: #f5f5f5;
+    color: #522252;
+}
+html:has(.dark) .download-btn a{
+    color: #f5f5f5;
+}
+html:has(.light) .download-btn a{
+    color: #522252;
+}
+
+html:has(.light) .download-btn{
+    background-color: #f5f5f5;
+    color: #522252;
+    border: none;
+    box-shadow: 0 0 10px 5px #5222524f;
+}
+html:has(.light) .download-btn a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+html:has(.light) .download-btn:hover a{
+    color: #ffffff;
+    text-decoration: none;
+}
 
 html:has(.dark) .silk{
     color: rgb(214, 214, 214);

@@ -2,84 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elvis | expertise</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <!-- Include in the <head> of your HTML -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elvis | expertise</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 </head>
 
 <body class="dark">
-    <div class="header">
-        <span class="material-symbols-outlined" id="theme-toggle" onclick="toggleThemeMenu()">
-            dark_mode
-        </span>
+  <div class="header">
+    <span class="material-symbols-outlined" id="theme-toggle" onclick="toggleThemeMenu()">
+      dark_mode
+    </span>
 
-        <!-- theme options, dark, light, follow device -->
+    <!-- theme options, dark, light, follow device -->
 
-        <ul class="theme-options" id="theme-options">
-            <li onclick="setTheme('dark', event)" id="dark">Dark</li>
-            <li onclick="setTheme('light',event)" id="light">Light</li>
-            <li onclick="setTheme('auto', event)" id="default">device default</li>
+    <ul class="theme-options" id="theme-options">
+      <li onclick="setTheme('dark', event)" id="dark">Dark</li>
+      <li onclick="setTheme('light',event)" id="light">Light</li>
+      <li onclick="setTheme('auto', event)" id="default">device default</li>
+    </ul>
+
+    <p>Get <a href="./index.html">Back to me</a> or <a href="./projects.html">Checkout my projects</a></p>
+  </div>
+
+  <div class="content">
+
+    <div class="about-me">
+      <section>
+        <h2><i class="fas fa-user-gear"></i> My Skills Summary</h2>
+
+        <h3><i class="fas fa-server"></i> Backend & Microservices Development</h3>
+        <ul>
+          <li><strong>gRPC & Protocol Buffers:</strong> I design lightweight, high-performance service communication for
+            scalable systems.</li>
+          <li><strong>Event-Driven Architecture:</strong> I use <em>Apache Kafka</em>, <em>Google Pub/Sub</em>, and
+            <em>Debezium</em> for robust CDC-based event sourcing.</li>
+          <li><strong>Programming:</strong> I develop in <em>Python</em> and <em>TypeScript</em>, leveraging frameworks
+            like FastAPI, Django, Express.js, and NestJS for backend systems.</li>
+          <li><strong>Machine Learning Libraries:</strong> I utilize <em>TensorFlow</em>, <em>Scikit-learn</em>,
+            <em>NumPy</em>, <em>Pandas</em>, and <em>PydanticAI</em> to integrate ML logic directly into microservices.
+          </li>
+          <li><strong>Database Expertise:</strong> I model and optimize relational databases using PostgreSQL and
+            integrate them with event streaming systems.</li>
         </ul>
 
-        <p>Get <a href="./index.html">Back to me</a> or <a href="./projects.html">Checkout my projects</a></p>
+        <h3><i class="fas fa-brain"></i> AI & LLM Integration</h3>
+        <ul>
+          <li><strong>OpenAI & Hugging Face:</strong> I build smart applications powered by GPT and fine-tuned
+            transformer models for specialized tasks.</li>
+          <li><strong>Qdrant:</strong> I implement vector databases for fast similarity search in AI-based
+            recommendation engines and chat memory systems.</li>
+          <li><strong>AI Pipelines:</strong> I design and deploy scalable ML workflows and real-time model inference
+            services.</li>
+        </ul>
+
+        <h3><i class="fas fa-code"></i> Frontend Development</h3>
+        <ul>
+          <li><strong>Next.js & TypeScript:</strong> I create full-stack SSR applications with clean API integration and
+            optimized performance.</li>
+          <li><strong>React, Angular, Vue:</strong> I’m comfortable across multiple frontend ecosystems to build dynamic
+            UIs.</li>
+          <li><strong>Flutter (Mobile):</strong> I’ve also built cross-platform mobile apps used in the real estate
+            industry.</li>
+        </ul>
+
+        <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+        <ul>
+          <li><strong>Google Cloud Platform:</strong> I deploy services using GCP’s Cloud Run, GKE (Kubernetes), Cloud
+            SQL, and AI Platform.</li>
+          <li><strong>Kubernetes:</strong> I manage and scale containerized workloads using Helm, k8s dashboards, and
+            horizontal pod autoscaling.</li>
+          <li><strong>CI/CD Pipelines:</strong> I automate testing, building, and deployment with <em>GitHub
+              Actions</em>, <em>Terraform</em>, <em>CircleCI</em>, and <em>Cloud Build</em>.</li>
+        </ul>
+
+        <h3><i class="fas fa-language"></i> Languages</h3>
+        <ul>
+          <li><strong>English:</strong> Fluent (C1-C2)</li>
+        </ul>
+
+        <h3><i class="fas fa-award"></i> Awards</h3>
+        <ul>
+          <li><strong>Google Developer Student Club (GDSC) Africa Award – 2021:</strong> Recognized for leadership and
+            innovation in developer communities.</li>
+        </ul>
+      </section>
+
+      </p>
     </div>
-
-    <div class="content">
-
-        <div class="about-me">
-            <section>
-                <h2><i class="fas fa-user-gear"></i> My Skills Summary</h2>
-              
-                <h3><i class="fas fa-server"></i> Backend & Microservices Development</h3>
-                <ul>
-                  <li><strong>gRPC & Protocol Buffers:</strong> I design lightweight, high-performance service communication for scalable systems.</li>
-                  <li><strong>Event-Driven Architecture:</strong> I use <em>Apache Kafka</em>, <em>Google Pub/Sub</em>, and <em>Debezium</em> for robust CDC-based event sourcing.</li>
-                  <li><strong>Programming:</strong> I develop in <em>Python</em> and <em>TypeScript</em>, leveraging frameworks like FastAPI, Django, Express.js, and NestJS for backend systems.</li>
-                  <li><strong>Machine Learning Libraries:</strong> I utilize <em>TensorFlow</em>, <em>Scikit-learn</em>, <em>NumPy</em>, <em>Pandas</em>, and <em>PydanticAI</em> to integrate ML logic directly into microservices.</li>
-                  <li><strong>Database Expertise:</strong> I model and optimize relational databases using PostgreSQL and integrate them with event streaming systems.</li>
-                </ul>
-              
-                <h3><i class="fas fa-brain"></i> AI & LLM Integration</h3>
-                <ul>
-                  <li><strong>OpenAI & Hugging Face:</strong> I build smart applications powered by GPT and fine-tuned transformer models for specialized tasks.</li>
-                  <li><strong>Qdrant:</strong> I implement vector databases for fast similarity search in AI-based recommendation engines and chat memory systems.</li>
-                  <li><strong>AI Pipelines:</strong> I design and deploy scalable ML workflows and real-time model inference services.</li>
-                </ul>
-              
-                <h3><i class="fas fa-code"></i> Frontend Development</h3>
-                <ul>
-                  <li><strong>Next.js & TypeScript:</strong> I create full-stack SSR applications with clean API integration and optimized performance.</li>
-                  <li><strong>React, Angular, Vue:</strong> I’m comfortable across multiple frontend ecosystems to build dynamic UIs.</li>
-                  <li><strong>Flutter (Mobile):</strong> I’ve also built cross-platform mobile apps used in the real estate industry.</li>
-                </ul>
-              
-                <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                <ul>
-                  <li><strong>Google Cloud Platform:</strong> I deploy services using GCP’s Cloud Run, GKE (Kubernetes), Cloud SQL, and AI Platform.</li>
-                  <li><strong>Kubernetes:</strong> I manage and scale containerized workloads using Helm, k8s dashboards, and horizontal pod autoscaling.</li>
-                  <li><strong>CI/CD Pipelines:</strong> I automate testing, building, and deployment with <em>GitHub Actions</em>, <em>Terraform</em>, <em>CircleCI</em>, and <em>Cloud Build</em>.</li>
-                </ul>
-              
-                <h3><i class="fas fa-language"></i> Languages</h3>
-                <ul>
-                  <li><strong>English:</strong> Fluent (C1-C2)</li>
-                </ul>
-              
-                <h3><i class="fas fa-award"></i> Awards</h3>
-                <ul>
-                  <li><strong>Google Developer Student Club (GDSC) Africa Award – 2021:</strong> Recognized for leadership and innovation in developer communities.</li>
-                </ul>
-              </section>
-              
-            </p>
-        </div>
 </body>
 <script src="./js/some.js"></script>
 

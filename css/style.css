@@ -283,6 +283,18 @@ html:has(.light) .project::before{
 }
 
 
+.resume iframe {
+    width: 60%;
+    height: 100vw;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px #5222524f;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+
 html:has(.dark) .silk{
     color: rgb(214, 214, 214);
 }

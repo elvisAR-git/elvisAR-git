@@ -1,0 +1,386 @@
+@font-face{
+    font-family:'Silkscreen';
+    src:url('../fonts/Silkscreen-Regular.ttf');
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'Quantico';
+    src: url('../fonts/Quantico-Regular.ttf');
+    font-display: swap;
+}
+
+
+a{
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.theme-options{
+    list-style: none;
+    width: auto;
+    position:fixed;
+    top: 25px;
+    right: 10px;
+    padding: 8px;
+    z-index: 10;
+    border-radius: 5px;
+    display: none;
+}
+
+html:has(.dark) .theme-options{
+    background-color: #0c050c;
+    box-shadow: 0 0 18px rgba(108, 19, 82, 0.5);
+}
+
+html:has(.light) .theme-options{
+    background-color: #f5f5f5;
+    /* shadow */
+    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+
+
+html:has(.light) .theme-options li.active{
+    background-color: #1e0e1e;
+    padding-left: 2px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+html:has(.dark) .theme-options li.active{
+    background-color: #f5f5f5;
+    padding-left: 2px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+body{
+    font-family: 'Quantico', sans-serif;
+    font-size: 20px;
+    color: rgb(87, 87, 87);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    width: 98%;
+}
+
+#theme-toggle{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* theme-toggle pulse */
+
+#theme-toggle:hover{
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.dark{
+    background-color: #0c050c;
+    color: rgb(87, 87, 87);
+    transition: 0.5s;
+
+}
+
+.light{
+    background-color: #f5f5f5;
+    color: rgb(87, 87, 87);
+    transition: 0.5s;
+}
+
+.header{
+    padding: 0px 10px 0px;
+    font-family: 'Silkscreen';
+}
+
+
+
+
+
+
+.content{
+    padding: 20px;
+}
+
+.me{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+.silk{
+    font-family: 'Silkscreen';
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+
+.projects{
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: minmax(auto, auto);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 10px;
+
+}
+
+.show-more:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+html:has(.dark) a{
+    color: #522252;
+}
+
+html:has(.light) a{
+    color: rgb(195, 28, 148);
+}
+
+a:hover{
+    color: #522252;
+    text-decoration: underline;
+}
+.project{
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.5s;
+    /* glow */
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+}
+
+.project{
+    border: 1px solid #522252;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.5s;
+    /* glow */
+    box-shadow: 0 0 10px 5px #5222524f;
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+    min-height: 320px;
+}
+
+.show-more{
+    color: #522252;
+    text-decoration: none;
+}
+
+
+.rocket{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+
+html:has(.dark) .open{
+    background-color: #5222524b;
+    color: #f5f5f5;
+    border: 1px solid #522252cb ;
+}
+
+
+html:has(.light) .open{
+    background-color: transparent;
+    color: #522252;
+    border: 1px solid #522252cb ;
+}
+
+html:has(.light) .project{
+    box-shadow: 1px 2px 10px gray;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+
+
+html:has(.dark) .project::before{
+    background-color: #52225231;
+}
+html:has(.light) .project::before{
+    background-color: #ff00ff;
+    width: 80%;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    transform: skewX(0deg);
+}
+
+.project::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    transform: skewX(-25deg);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.open{
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 20%;
+    padding: 6px;
+    border-radius: 5px;
+    gap: 8px;
+}
+
+.open:hover{
+    text-decoration: none;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.more{
+    display: none;
+}
+
+
+.resume iframe {
+    width: calc(100vw - 200px);
+    height: calc(100vh - 200px);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px #5222524f;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+
+@media (max-width: 768px) {
+    .resume iframe {
+        display: none;
+    }
+}
+
+.download-btn{
+    background-color: #522252;
+    color: #f5f5f5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.download-btn a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.download-btn:hover{
+    background-color: #f5f5f5;
+    color: #522252;
+    border: 1px solid #522252;
+}
+
+html:has(.dark) .download-btn:hover{
+    background-color: #522252;
+    color: #f5f5f5;
+    border: 1px solid #522252;
+}
+html:has(.dark) .download-btn{
+    background-color: #522252;
+    color: #f5f5f5;
+    border: none;
+}
+html:has(.light) .download-btn{
+    background-color: #f5f5f5;
+    color: #522252;
+    border: none;
+}
+html:has(.light) .download-btn:hover{
+    background-color: #522252;
+    color: #f5f5f5;
+    border: 1px solid #522252;
+}
+html:has(.dark) .resume iframe{
+    box-shadow: 0 0 10px 5px #f5f5f54f;
+}
+html:has(.light) .resume iframe{
+    box-shadow: 0 0 10px 5px #5222524f;
+}
+html:has(.dark) .resume{
+    background-color: #0c050c;
+    color: #f5f5f5;
+}
+html:has(.light) .resume{
+    background-color: #f5f5f5;
+    color: #522252;
+}
+html:has(.dark) .download-btn a{
+    color: #f5f5f5;
+}
+html:has(.light) .download-btn a{
+    color: #522252;
+}
+
+html:has(.light) .download-btn{
+    background-color: #f5f5f5;
+    color: #522252;
+    border: none;
+    box-shadow: 0 0 10px 5px #5222524f;
+}
+html:has(.light) .download-btn a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+html:has(.light) .download-btn:hover a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+html:has(.dark) .silk{
+    color: rgb(214, 214, 214);
+}

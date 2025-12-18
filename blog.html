@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvis | blog</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=swap" />
+    <meta name="description" content="Elvis Moraa's blog - thoughts on software development, machine learning, and technology.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+</head>
+
+<body class="dark">
+    <div class="header">
+        <span class="material-symbols-outlined" id="theme-toggle" onclick="toggleThemeMenu()">
+            dark_mode
+        </span>
+
+        <!-- theme options, dark, light, follow device -->
+
+        <ul class="theme-options" id="theme-options">
+            <li onclick="setTheme('dark', event)" id="dark">Dark</li>
+            <li onclick="setTheme('light',event)" id="light">Light</li>
+            <li onclick="setTheme('auto', event)" id="default">device default</li>
+        </ul>
+        <p>Get <a href="./index.html">Back to me</a> or <a href="./projects.html">Checkout my projects</a> or <a href="./what_i_use.html">What I use</a></p>
+    </div>
+
+    <div class="content">
+
+        <h2 class="silk">
+            My Blog
+        </h2>
+        <p>
+            Thoughts on software development, machine learning, and technology. Built with vanilla JS and retro vibes.
+        </p>
+
+        <div class="blog-posts" id="blog-posts">
+            <!-- Blog posts will be dynamically loaded here -->
+            <div class="blog-loading">
+                <p class="silk">Loading posts...</p>
+            </div>
+        </div>
+
+        <br>
+        <div class="footer">
+
+            <div class="footer-content">
+                <p class="silk">Contact</p>
+                <p class="desc">
+                    <a href="mailto:alanray459@gmaill.com" target="_blank">
+                        [Send me an email]
+                    </a>
+                    <span>Or</span>
+                    <a href="/resume.html" target="_blank">
+                        [Download a copy of my resume]
+                    </a>
+                </p>
+
+                <p>
+                    I'm available on all platforms but predominantly Just mail.
+                </p>
+
+                <p>
+                    Thanks for reading through if you did :)
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/some.js"></script>
+<script src="./js/blog.js"></script>
+
+</html>

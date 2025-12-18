@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Welcome to My Retro Blog",
+      "date": "2025-12-18",
+      "excerpt": "Check out my new blog section with a classic retro vibe. A space where I'll share my thoughts on tech, development, and everything in between.",
+      "content": "<p>Welcome to my retro-styled blog! I've built this space to share my journey in software development, machine learning, and the ever-evolving world of technology.</p><p>This blog features a classic CRT monitor aesthetic with that nostalgic purple-pink glow we all love. It's built with vanilla JavaScript, keeping things simple and fast - no frameworks needed.</p><p>I'll be writing about my experiences with microservices architecture, ML pipelines, and the interesting challenges I encounter while building scalable systems. Stay tuned for more posts!</p>",
+      "tags": ["announcement", "retro", "web-development"],
+      "author": "Elvis Moraa"
+    },
+    {
+      "id": 2,
+      "title": "Building with Vanilla JS in 2025",
+      "date": "2025-12-17",
+      "excerpt": "Why I still love vanilla JavaScript and how it keeps my projects fast and maintainable. Sometimes simpler is better.",
+      "content": "<p>In an era dominated by React, Vue, and Angular, there's something refreshing about building with pure vanilla JavaScript. Don't get me wrong - I use frameworks professionally and they're great for complex applications.</p><p>But for projects like this portfolio, vanilla JS offers several advantages:</p><ul><li><strong>Zero dependencies</strong> - No node_modules folder weighing down your project</li><li><strong>Lightning fast</strong> - No framework overhead means instant loading</li><li><strong>Complete control</strong> - You understand every line of code</li><li><strong>No build process</strong> - Just write, save, and refresh</li></ul><p>This blog system fetches data from a simple JSON file, renders cards dynamically, and handles navigation - all with vanilla JavaScript. It's a great reminder that you don't always need a framework to build something functional and beautiful.</p>",
+      "tags": ["javascript", "web-development", "vanilla-js"],
+      "author": "Elvis Moraa"
+    },
+    {
+      "id": 3,
+      "title": "The Art of Retro Web Design",
+      "date": "2025-12-15",
+      "excerpt": "Exploring the nostalgic aesthetics of early computing and how to bring that retro feeling to modern web projects.",
+      "content": "<p>There's a growing trend of retro-inspired web design, and for good reason. The aesthetics of early computing - CRT monitors, pixelated fonts, neon glows - evoke a sense of nostalgia while standing out in today's clean, minimalist web.</p><h3>Key Elements of Retro Design</h3><p><strong>Pixelated Fonts:</strong> Fonts like Silkscreen bring that classic 8-bit feel. They remind us of early video games and DOS terminals.</p><p><strong>CRT Effects:</strong> Box shadows and subtle glows simulate the phosphor glow of old monitors. It's all about that soft, hazy edge.</p><p><strong>Limited Color Palettes:</strong> Purple and pink (#522252) create that classic cyberpunk vibe. High contrast works great for readability too.</p><p><strong>Scanlines & Noise:</strong> Subtle effects that mimic screen artifacts add authenticity without being distracting.</p><p>The trick is balancing nostalgia with usability. You want the aesthetic without sacrificing accessibility or performance. This portfolio strikes that balance - retro styling with modern web standards underneath.</p>",
+      "tags": ["design", "retro", "css", "web-development"],
+      "author": "Elvis Moraa"
+    }
+  ]
+}

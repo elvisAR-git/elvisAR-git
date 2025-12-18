@@ -1,0 +1,138 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Welcome to My Retro Blog",
+      "date": "2025-12-15",
+      "excerpt": "Check out my new blog section with a classic early 2000s vibe. It's simple, it's clean, and it just works.",
+      "content": "<p>Hey there! Welcome to my retro blog section. If you're reading this, you've stumbled upon my attempt to bring back the glory days of the early 2000s web.</p><p>No fancy frameworks, no complex build processes - just good old HTML, CSS, and JavaScript. The way the web was meant to be.</p><p>I built this blog section to share my thoughts on software development, machine learning, and whatever else comes to mind. Expect posts about backend systems, AI, and maybe some nostalgic rants about how things used to be simpler.</p><p>Stay tuned for more content!</p>",
+      "tags": ["announcement", "retro", "web"],
+      "author": "Elvis Moraa",
+      "comments": [
+        {
+          "id": 1,
+          "author": "John Smith",
+          "date": "2025-12-16",
+          "content": "Love the retro aesthetic! Takes me back to the GeoCities days. Can't wait to read more posts!"
+        },
+        {
+          "id": 2,
+          "author": "Sarah Johnson",
+          "date": "2025-12-16",
+          "content": "Finally, a blog that loads instantly! No spinners, no heavy frameworks. This is how it should be."
+        },
+        {
+          "id": 3,
+          "author": "Mike Chen",
+          "date": "2025-12-17",
+          "content": "The Silkscreen font brings back memories. Are you planning to add an RSS feed?"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Why I Still Love Backend Development",
+      "date": "2025-12-10",
+      "excerpt": "Backend development is where the real magic happens. Let me tell you why I'm still passionate about building systems behind the scenes.",
+      "content": "<p>There's something incredibly satisfying about building robust backend systems. While frontend gets all the glory with its flashy animations and beautiful designs, the backend is where the real complexity lives.</p><p>I've spent years working with microservices, gRPC, event-driven architectures, and distributed systems. Each project teaches me something new about scalability, reliability, and performance.</p><p>At Pariti, I got to work on systems serving over 100,000 users. The challenges of maintaining uptime, optimizing database queries, and handling peak loads - that's what gets me excited.</p><p>Some of my favorite technologies: PostgreSQL for its reliability, Kafka for event streaming, and Kubernetes for orchestration. These tools have been battle-tested and they just work.</p><p>If you're just starting out in backend development, my advice is simple: learn the fundamentals first. Understand databases, networking, and system design. The frameworks will come and go, but the fundamentals remain constant.</p>",
+      "tags": ["backend", "development", "career"],
+      "author": "Elvis Moraa",
+      "comments": [
+        {
+          "id": 1,
+          "author": "David Lee",
+          "date": "2025-12-11",
+          "content": "Great perspective! I'm transitioning from frontend to backend and this is exactly the motivation I needed."
+        },
+        {
+          "id": 2,
+          "author": "Emily Wong",
+          "date": "2025-12-11",
+          "content": "100% agree on learning fundamentals. Too many devs jump straight to frameworks without understanding what's happening under the hood."
+        },
+        {
+          "id": 3,
+          "author": "Robert Martinez",
+          "date": "2025-12-12",
+          "content": "Kafka + Kubernetes combo is powerful. Have you tried any service mesh solutions like Istio?"
+        },
+        {
+          "id": 4,
+          "author": "Lisa Anderson",
+          "date": "2025-12-13",
+          "content": "PostgreSQL is underrated. People always talk about NoSQL but for most use cases, Postgres is more than enough."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Machine Learning in Production: Lessons Learned",
+      "date": "2025-12-05",
+      "excerpt": "Deploying ML models to production is different from training them in notebooks. Here are some hard-earned lessons from the trenches.",
+      "content": "<p>Everyone talks about training machine learning models, but deploying them to production? That's where things get interesting.</p><p>I've integrated LLMs using OpenAI and Hugging Face, built vector search systems with Qdrant, and optimized model inference pipelines. Here's what I've learned:</p><h3>Lesson 1: Model Versioning is Critical</h3><p>You need to version your models just like you version your code. When something breaks at 3 AM, you need to know exactly which model version is running in production.</p><h3>Lesson 2: Monitor Everything</h3><p>Don't just monitor your servers - monitor your model predictions, inference times, and data drift. Your model might be running fine but producing garbage predictions.</p><h3>Lesson 3: Optimize for Latency</h3><p>In production, users don't care about your F1 score. They care about getting results fast. Sometimes a simpler, faster model is better than a complex, accurate one.</p><p>Machine learning engineering is still software engineering. All the best practices apply: testing, CI/CD, monitoring, and documentation.</p>",
+      "tags": ["machine-learning", "production", "devops"],
+      "author": "Elvis Moraa",
+      "comments": [
+        {
+          "id": 1,
+          "author": "Alex Kumar",
+          "date": "2025-12-06",
+          "content": "This is gold! The monitoring point is so important. We had a model that looked fine but was making terrible predictions."
+        },
+        {
+          "id": 2,
+          "author": "Jennifer White",
+          "date": "2025-12-07",
+          "content": "How do you handle data drift in production? We're struggling with this in our system."
+        },
+        {
+          "id": 3,
+          "author": "Thomas Brown",
+          "date": "2025-12-08",
+          "content": "Great post! Model versioning saved us multiple times. We use MLflow for this."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "The Beauty of Simple Solutions",
+      "date": "2025-11-28",
+      "excerpt": "Not every problem needs a complex solution. Sometimes the simplest approach is the best approach.",
+      "content": "<p>I've noticed a trend in software development: we love to over-engineer things. We reach for complex frameworks, intricate architectures, and elaborate patterns when a simple solution would work just fine.</p><p>This website is a perfect example. It's just static HTML, CSS, and vanilla JavaScript. No build process, no dependency hell, no framework fatigue. And you know what? It works perfectly.</p><p>I've built production systems serving thousands of users with simple, straightforward architectures. Not every project needs microservices. Not every app needs Redux. Not every website needs React.</p><h3>When to Keep It Simple</h3><ul><li>Your project is small and likely to stay small</li><li>You have limited time or resources</li><li>Performance and load time are critical</li><li>You want to minimize maintenance burden</li></ul><p>The next time you start a project, ask yourself: what's the simplest thing that could possibly work? Start there. You can always add complexity later if you actually need it.</p><p>Remember: simple doesn't mean simplistic. It means elegant, maintainable, and focused on solving the problem at hand.</p>",
+      "tags": ["philosophy", "engineering", "simplicity"],
+      "author": "Elvis Moraa",
+      "comments": [
+        {
+          "id": 1,
+          "author": "Chris Taylor",
+          "date": "2025-11-29",
+          "content": "Preach! YAGNI (You Aren't Gonna Need It) is such an important principle that gets forgotten too often."
+        },
+        {
+          "id": 2,
+          "author": "Maria Garcia",
+          "date": "2025-11-30",
+          "content": "This resonates so much. We spent months building a microservices architecture for a project that could've been a monolith."
+        },
+        {
+          "id": 3,
+          "author": "James Wilson",
+          "date": "2025-12-01",
+          "content": "Love this blog! No JavaScript framework bloat, just pure content. This is the way."
+        },
+        {
+          "id": 4,
+          "author": "Rachel Kim",
+          "date": "2025-12-02",
+          "content": "Simple solutions are also easier to debug and maintain. Future you will thank present you."
+        },
+        {
+          "id": 5,
+          "author": "Daniel Santos",
+          "date": "2025-12-03",
+          "content": "Your website loads instantly. Meanwhile, modern sites take 5 seconds to show a spinner. Makes you think."
+        }
+      ]
+    }
+  ]
+}

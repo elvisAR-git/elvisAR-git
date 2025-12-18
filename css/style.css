@@ -615,3 +615,311 @@ html:has(.dark) .blog-post-title{
     padding: 40px;
     color: #888;
 }
+
+/* Comments Section Styling */
+.comments-section{
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #52225248;
+}
+
+.comments-section h2{
+    font-family: 'Silkscreen';
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+html:has(.dark) .comments-section h2{
+    color: rgb(214, 214, 214);
+}
+
+html:has(.light) .comments-section h2{
+    color: #522252;
+}
+
+.comments-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.comment-card{
+    background-color: #52225215;
+    border: 1px solid #52225240;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.comment-card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 1px;
+    background: linear-gradient(135deg, #522252, transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.comment-card:hover::before{
+    opacity: 1;
+}
+
+html:has(.dark) .comment-card{
+    background-color: #52225215;
+    border-color: #52225240;
+}
+
+html:has(.light) .comment-card{
+    background-color: #52225208;
+    border-color: #52225230;
+}
+
+.comment-header{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.comment-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #522252, #884488);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Silkscreen';
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.comment-meta{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.comment-author{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+html:has(.dark) .comment-author{
+    color: rgb(214, 214, 214);
+}
+
+html:has(.light) .comment-author{
+    color: #522252;
+}
+
+.comment-date{
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+html:has(.dark) .comment-date{
+    color: #aaa;
+}
+
+html:has(.light) .comment-date{
+    color: #666;
+}
+
+.comment-content{
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+html:has(.dark) .comment-content{
+    color: #ccc;
+}
+
+html:has(.light) .comment-content{
+    color: #333;
+}
+
+.comments-empty{
+    text-align: center;
+    padding: 40px;
+    opacity: 0.6;
+}
+
+/* Comment Form Styling */
+.comment-form{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #52225210;
+    border: 1px solid #52225240;
+    border-radius: 8px;
+}
+
+html:has(.dark) .comment-form{
+    background-color: #52225210;
+    border-color: #52225240;
+}
+
+html:has(.light) .comment-form{
+    background-color: #52225208;
+    border-color: #52225230;
+}
+
+.comment-form h3{
+    font-family: 'Silkscreen';
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+html:has(.dark) .comment-form h3{
+    color: rgb(214, 214, 214);
+}
+
+html:has(.light) .comment-form h3{
+    color: #522252;
+}
+
+.comment-form-note{
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+html:has(.dark) .comment-form-note{
+    color: #aaa;
+}
+
+html:has(.light) .comment-form-note{
+    color: #666;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+html:has(.dark) .form-group label{
+    color: rgb(214, 214, 214);
+}
+
+html:has(.light) .form-group label{
+    color: #522252;
+}
+
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #52225260;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+html:has(.dark) .form-group input,
+html:has(.dark) .form-group textarea{
+    background-color: #52225220;
+    border-color: #52225260;
+    color: #f5f5f5;
+}
+
+html:has(.light) .form-group input,
+html:has(.light) .form-group textarea{
+    background-color: #ffffff;
+    border-color: #52225240;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: #522252;
+    box-shadow: 0 0 0 3px #52225220;
+}
+
+html:has(.dark) .form-group input:focus,
+html:has(.dark) .form-group textarea:focus{
+    box-shadow: 0 0 10px #52225260;
+}
+
+.form-group textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+
+.comment-submit{
+    background: linear-gradient(135deg, #522252, #884488);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 5px;
+    font-family: 'Silkscreen';
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px #52225240;
+}
+
+.comment-submit:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #52225260;
+}
+
+.comment-submit:active{
+    transform: translateY(0);
+}
+
+.comment-success{
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #22522220;
+    border: 1px solid #225222;
+    border-radius: 8px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comment-success p{
+    margin: 0;
+    line-height: 1.6;
+}
+
+html:has(.dark) .comment-success{
+    background-color: #22522220;
+    border-color: #225222;
+    color: #90ee90;
+}
+
+html:has(.light) .comment-success{
+    background-color: #22522210;
+    border-color: #225222;
+    color: #228822;
+}

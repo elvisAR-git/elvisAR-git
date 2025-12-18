@@ -25,9 +25,108 @@ function formatDate(dateString) {
     return date.toLocaleDateString('en-US', options);
 }
 
+// Format comment date to relative time (e.g., "2 hours ago")
+function formatCommentDate(dateString) {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffMs = now - date;
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMs / 3600000);
+    const diffDays = Math.floor(diffMs / 86400000);
+
+    if (diffMins < 60) {
+        return diffMins <= 1 ? '1 minute ago' : `${diffMins} minutes ago`;
+    } else if (diffHours < 24) {
+        return diffHours === 1 ? '1 hour ago' : `${diffHours} hours ago`;
+    } else if (diffDays < 7) {
+        return diffDays === 1 ? '1 day ago' : `${diffDays} days ago`;
+    } else {
+        return formatDate(dateString);
+    }
+}
+
 // Get post by ID
 function getPostById(id) {
     return blogPosts.find(post => post.id === parseInt(id));
+}
+
+// Render comments section
+function renderComments(comments) {
+    if (!comments || comments.length === 0) {
+        return `
+            <div class="comments-empty">
+                <p>No comments yet. Be the first to comment!</p>
+            </div>
+        `;
+    }
+
+    return comments.map(comment => `
+        <div class="comment-card">
+            <div class="comment-header">
+                <div class="comment-avatar">${comment.author.charAt(0).toUpperCase()}</div>
+                <div class="comment-meta">
+                    <span class="comment-author">${comment.author}</span>
+                    <span class="comment-date">${formatCommentDate(comment.date)}</span>
+                </div>
+            </div>
+            <div class="comment-content">
+                ${comment.content}
+            </div>
+        </div>
+    `).join('');
+}
+
+// Render comment form
+function renderCommentForm() {
+    return `
+        <div class="comment-form">
+            <h3 class="silk">Leave a Comment</h3>
+            <p class="comment-form-note">Share your thoughts (demo only - comments won't be saved)</p>
+            <form id="comment-form" onsubmit="handleCommentSubmit(event)">
+                <div class="form-group">
+                    <label for="comment-name">Name</label>
+                    <input type="text" id="comment-name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment-email">Email (optional)</label>
+                    <input type="email" id="comment-email" name="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="comment-text">Comment</label>
+                    <textarea id="comment-text" name="comment" rows="4" placeholder="Write your comment here..." required></textarea>
+                </div>
+                <button type="submit" class="comment-submit">Post Comment</button>
+            </form>
+        </div>
+    `;
+}
+
+// Handle comment form submission (demo only)
+function handleCommentSubmit(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const name = form.name.value;
+    const comment = form.comment.value;
+
+    // Show success message
+    const formContainer = document.querySelector('.comment-form');
+    const successMessage = document.createElement('div');
+    successMessage.className = 'comment-success';
+    successMessage.innerHTML = `
+        <p class="silk">✓ Comment submitted!</p>
+        <p>Thanks for your comment, ${name}! (This is a demo - comments aren't actually saved)</p>
+    `;
+
+    formContainer.parentNode.insertBefore(successMessage, formContainer);
+
+    // Reset form
+    form.reset();
+
+    // Remove success message after 5 seconds
+    setTimeout(() => {
+        successMessage.remove();
+    }, 5000);
 }
 
 // Render blog cards on listing page
@@ -108,6 +207,15 @@ function renderSinglePost(post) {
         <div class="blog-content">
             ${post.content}
         </div>
+
+        <div class="comments-section">
+            <h2 class="silk">Comments (${post.comments ? post.comments.length : 0})</h2>
+            <div class="comments-list">
+                ${renderComments(post.comments)}
+            </div>
+        </div>
+
+        ${renderCommentForm()}
 
         <a href="./blog.html" class="back-to-blog">
             <span class="material-symbols-outlined">arrow_back</span>

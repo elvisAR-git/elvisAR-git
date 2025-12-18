@@ -7,7 +7,27 @@
       "excerpt": "Check out my new blog section with a classic retro vibe. A space where I'll share my thoughts on tech, development, and everything in between.",
       "content": "<p>Welcome to my retro-styled blog! I've built this space to share my journey in software development, machine learning, and the ever-evolving world of technology.</p><p>This blog features a classic CRT monitor aesthetic with that nostalgic purple-pink glow we all love. It's built with vanilla JavaScript, keeping things simple and fast - no frameworks needed.</p><p>I'll be writing about my experiences with microservices architecture, ML pipelines, and the interesting challenges I encounter while building scalable systems. Stay tuned for more posts!</p>",
       "tags": ["announcement", "retro", "web-development"],
-      "author": "Elvis Moraa"
+      "author": "Elvis Moraa",
+      "comments": [
+        {
+          "id": 1,
+          "author": "Sarah Chen",
+          "date": "2025-12-18T14:30:00Z",
+          "content": "Love the retro aesthetic! Takes me back to the early 2000s web design. The purple glow effect is perfect."
+        },
+        {
+          "id": 2,
+          "author": "Mike Johnson",
+          "date": "2025-12-18T16:45:00Z",
+          "content": "Great start to your blog! Looking forward to reading about your ML pipeline experiences. The vanilla JS approach is refreshing in today's framework-heavy world."
+        },
+        {
+          "id": 3,
+          "author": "Alex Rivera",
+          "date": "2025-12-18T18:20:00Z",
+          "content": "This brings back so many memories of old school computing. Excited to follow your journey!"
+        }
+      ]
     },
     {
       "id": 2,
@@ -16,7 +36,33 @@
       "excerpt": "Why I still love vanilla JavaScript and how it keeps my projects fast and maintainable. Sometimes simpler is better.",
       "content": "<p>In an era dominated by React, Vue, and Angular, there's something refreshing about building with pure vanilla JavaScript. Don't get me wrong - I use frameworks professionally and they're great for complex applications.</p><p>But for projects like this portfolio, vanilla JS offers several advantages:</p><ul><li><strong>Zero dependencies</strong> - No node_modules folder weighing down your project</li><li><strong>Lightning fast</strong> - No framework overhead means instant loading</li><li><strong>Complete control</strong> - You understand every line of code</li><li><strong>No build process</strong> - Just write, save, and refresh</li></ul><p>This blog system fetches data from a simple JSON file, renders cards dynamically, and handles navigation - all with vanilla JavaScript. It's a great reminder that you don't always need a framework to build something functional and beautiful.</p>",
       "tags": ["javascript", "web-development", "vanilla-js"],
-      "author": "Elvis Moraa"
+      "author": "Elvis Moraa",
+      "comments": [
+        {
+          "id": 1,
+          "author": "David Kim",
+          "date": "2025-12-17T10:15:00Z",
+          "content": "Couldn't agree more! I've been preaching this at my company. Not everything needs React. Sometimes vanilla JS is the right tool for the job."
+        },
+        {
+          "id": 2,
+          "author": "Emma Watson",
+          "date": "2025-12-17T13:22:00Z",
+          "content": "This is exactly what I needed to hear. Been feeling framework fatigue lately. Thanks for the perspective!"
+        },
+        {
+          "id": 3,
+          "author": "Carlos Mendez",
+          "date": "2025-12-17T15:50:00Z",
+          "content": "The performance benefits alone make it worth considering. Great article!"
+        },
+        {
+          "id": 4,
+          "author": "Lisa Park",
+          "date": "2025-12-17T19:30:00Z",
+          "content": "As someone who learned web dev before frameworks took over, this makes me nostalgic. But you're right - vanilla JS is underrated in 2025."
+        }
+      ]
     },
     {
       "id": 3,
@@ -25,7 +71,39 @@
       "excerpt": "Exploring the nostalgic aesthetics of early computing and how to bring that retro feeling to modern web projects.",
       "content": "<p>There's a growing trend of retro-inspired web design, and for good reason. The aesthetics of early computing - CRT monitors, pixelated fonts, neon glows - evoke a sense of nostalgia while standing out in today's clean, minimalist web.</p><h3>Key Elements of Retro Design</h3><p><strong>Pixelated Fonts:</strong> Fonts like Silkscreen bring that classic 8-bit feel. They remind us of early video games and DOS terminals.</p><p><strong>CRT Effects:</strong> Box shadows and subtle glows simulate the phosphor glow of old monitors. It's all about that soft, hazy edge.</p><p><strong>Limited Color Palettes:</strong> Purple and pink (#522252) create that classic cyberpunk vibe. High contrast works great for readability too.</p><p><strong>Scanlines & Noise:</strong> Subtle effects that mimic screen artifacts add authenticity without being distracting.</p><p>The trick is balancing nostalgia with usability. You want the aesthetic without sacrificing accessibility or performance. This portfolio strikes that balance - retro styling with modern web standards underneath.</p>",
       "tags": ["design", "retro", "css", "web-development"],
-      "author": "Elvis Moraa"
+      "author": "Elvis Moraa",
+      "comments": [
+        {
+          "id": 1,
+          "author": "Nina Patel",
+          "date": "2025-12-15T09:00:00Z",
+          "content": "The balance between retro aesthetics and modern usability is key. Love how you've explained the design principles here!"
+        },
+        {
+          "id": 2,
+          "author": "Jason Lee",
+          "date": "2025-12-15T11:45:00Z",
+          "content": "That purple-pink color scheme is fire! Been looking for inspiration for my next project and this is perfect."
+        },
+        {
+          "id": 3,
+          "author": "Rachel Green",
+          "date": "2025-12-15T14:10:00Z",
+          "content": "As a designer, I appreciate the thoughtfulness behind retro design. It's not just slapping on some pixel fonts - there's real craft here."
+        },
+        {
+          "id": 4,
+          "author": "Tom Bradley",
+          "date": "2025-12-15T16:30:00Z",
+          "content": "Silkscreen font for life! Great breakdown of what makes retro design work in 2025."
+        },
+        {
+          "id": 5,
+          "author": "Yuki Tanaka",
+          "date": "2025-12-15T20:00:00Z",
+          "content": "The CRT effects are spot on. Not overdone, just enough to evoke that nostalgia. Well done!"
+        }
+      ]
     }
   ]
 }

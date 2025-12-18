@@ -33,7 +33,7 @@ body {
 
 /* ===== HEADER (ROW 1) ===== */
 .header {
-    background-color: #000000;
+    background-color: #008000;
     color: #FFFFFF;
     padding: 20px;
     border-bottom: 2px solid #000000;
@@ -241,7 +241,7 @@ table tr:nth-child(even) {
 
 /* ===== FOOTER (ROW 3) ===== */
 .footer {
-    background-color: #000000;
+    background-color: #008000;
     color: #FFFFFF;
     padding: 20px;
     border-top: 2px solid #000000;
